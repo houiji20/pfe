@@ -1,0 +1,34 @@
+.course-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .course-description {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for text readability */
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 5px;
+  }
+  

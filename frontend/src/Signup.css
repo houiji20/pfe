@@ -1,0 +1,108 @@
+/* Add this to set the blurred background image for the whole page */
+body {
+    position: relative; /* Set position for absolute children */
+    height: 100vh; /* Ensure the body covers the full viewport height */
+    margin: 0; /* Remove default margin */
+
+}
+
+body::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the whole viewport */
+    left: 0; /* Cover the whole viewport */
+    right: 0; /* Cover the whole viewport */
+    bottom: 0; /* Cover the whole viewport */    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    filter: blur(10px); /* Apply the blur effect */
+    z-index: -1; /* Send it behind the content */
+}
+
+.signup-container {
+    max-width: 500px; /* Set a maximum width */
+    margin: 90px auto; /* Center the form vertically */
+    padding: 20px; /* Add some padding */
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    backdrop-filter: blur(0.8px); /* Increased blur effect for the background */
+    border: 0.5px solid rgba(255, 255, 255, 0.3); /* Lighter border for depth */
+}
+
+.signup-title {
+    text-align: center; /* Center the title */
+    color: #007bff; /* Match the navbar color */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 1.8rem; /* Larger title size */
+}
+
+.signup-form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements */
+}
+
+.form-group {
+    position: relative; /* Position relative for label positioning */
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+.form-input {
+    width: 100%; /* Full width inputs */
+    padding: 12px; /* Increased padding for inputs */
+    border: 1px solid #ced4da; /* Input border */
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.9); /* More transparent background */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.form-input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.form-label {
+    position: absolute; /* Position label inside input */
+    left: 12px; /* Adjust label position */
+    top: 12px; /* Adjust label position */
+    color: #6c757d; /* Gray label color */
+    transition: all 0.3s; /* Smooth transition */
+    pointer-events: none; /* Prevent mouse events on label */
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: -10px; /* Move label up when focused or not empty */
+    left: 8px; /* Adjust left position */
+    font-size: 0.8rem; /* Smaller font size */
+    color: #007bff; /* Match the focus color */
+}
+
+.signup-button {
+    background-color: #007bff; /* Button color matching navbar */
+    color: #fff; /* White text for the button */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    font-size: 0.9rem; /* Button font size */
+}
+
+.signup-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.signup-button:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%; /* Full width on small screens */
+        margin: 20px auto; /* Reduce margin */
+    }
+}

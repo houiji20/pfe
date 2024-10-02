@@ -1,0 +1,44 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #495057;
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .carousel-item img {
+    border-radius: 10px;
+  }
+  .platform-representation {
+    background-color: #f0f8ff; /* Light background for contrast */
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-top: 30px;
+    color: #333;
+}
+
+.platform-representation h2 {
+    color: #ff7e5f; /* Customize this color */
+    margin-bottom: 20px;
+}
+
+.platform-representation p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+  
